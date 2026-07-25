@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Rubik:wght@400;700;900&display=swap');
+
+:root {
+    --bg-main: #f4f4f9;
+    --bg-card: #fff;
+    --text-color: #333;
+    --fraction-btn-bg: #fafafa;
+    --bar-container-bg: #e0e0e0;
+
+    --color-brickleberry: #4abc68;
+    --color-paradise: #3b62d9;
+    --color-death: #b30000;
+
+    --hp-bar-color: #ff4d4d;
+    --attack-bar-color: #ffa500;
+    --defence-bar-color: #4da6ff;
+
+    --font-main: 'Rubik', sans-serif;
+    --font-epic: 'Cinzel', serif;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-main);
+    background-color: var(--bg-main);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+#app {
+    width: 100%;
+    max-width: 1000px;
+    padding: 20px;
+    text-align: center;
+}
+
+.fraction-brickleberry, .fraction-paradise {
+    flex: 1;
+    padding: 20px;
+    border: 3px solid transparent;
+    border-radius: 12px;
+    background: var(--bg-card);
+    transition: all 0.3s ease;
+}
+
+.fraction-brickleberry {
+    border-color: var(--color-brickleberry);
+}
+.fraction-paradise {
+    border-color: var(--color-paradise);
+}
+
+.fraction-container button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid var(--bg-card);
+    border-radius: 8px;
+    background: var(--fraction-btn-bg);
+    transition: all 0.2s
+}
+
+.fraction-container button:hover {
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+.fraction-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.char-preview {
+    margin-top: 30px;
+    background: var(--bg-card);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+.stat-row {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+.stat-row span {
+    width: 80px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.bar-container {
+    flex: 1;
+    height: 20px;
+    background: var(--bar-container-bg);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.bar {
+    height: 100%;
+    width: 0%;
+    transition: width 0.4s ease-out;
+}
+
+.hp-bar {
+    background: var(--hp-bar-color);
+}
+
+.attack-bar {
+    background: var(--attack-bar-color);
+}
+.defence-bar {
+    background: var(--defence-bar-color);
+}
+
+.death-text {
+    font-family: var(--font-epic);
+    font-size: 72px;
+    color: var(--color-death);
+    text-shadow: 0 0 20px rgba(255, 0, 0, 0.7);
+    animation: darkSoulsAppear 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    letter-spacing: 6px;
+}
+
+#death-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+#preview-img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    border-radius: 40%;
+    border: 3px solid var(--text-color);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    margin: 0 auto 15px auto;
+    display: block;
+}
+
+@keyframes darkSoulsAppear {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+        letter-spacing: -2px;
+        filter: blur(10px);
+    }
+    40% {
+        opacity: 0.8;
+        filter: blur(2px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        letter-spacing: 6px;
+        filter: blur(0);
+    }
+}
+
+.hidden {
+    display: none !important; 
+}

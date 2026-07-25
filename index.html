@@ -9,7 +9,92 @@
 </head>
 
 <body>
-    <div id="app"></div>
+    <div id="app">
+        <button id="theme-toggle">☀️</button>
+
+        <section id="screen-welcome">
+            <h1>Welcome Little Hero</h1>
+            <input type="player-name-input" type="text" placeholder="Your name...">
+            <button id="start">Let's go!</button>
+        </section>
+
+        <section id="screen-select" class="hidden">
+            <h2>Your choose</h2>
+            <div class="fraction-container">
+                <div class="fraction-brickleberry">
+                    <h3>Brickleberry Rangers</h3>
+                    <button id="woody">Woody Johnson</button>
+                    <button id="ethel">Ethel Anderson</button>
+                    <button id="malloy">Malloy</button>
+                </div>
+
+                <div class="fraction-paradise">
+                    <h3>Police Paradise</h3>
+                    <button id="randall">Chief Randall Crawford</button>
+                    <button id="gina">Gina Jabowski</button>
+                    <button id="bullet">Bullet</button>
+                </div>
+            </div>
+
+            <div id="character-preview" class="char-preview hidden">
+                <img id="preview-img" src="" alt="Character Avatar" class="preview-avatar">
+                <div class="preview-info">
+                    <h3 id="preview-name">Character Name</h3>
+                    <div class="stat-row">
+                        <span>HP:</span>
+                        <div class="bar-container">
+                            <div id="bar-hp" class="bar hp-bar"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="stat-row">
+                    <span>Attack:</span>
+                    <div class="bar-container">
+                        <div id="bar-attack" class="bar attack-bar"></div>
+                    </div>
+                </div>
+                <div class="stat-row">
+                    <span>Defence:</span>
+                    <div class="bar-container">
+                        <div id="bar-defence" class="bar defence-bar"></div>
+                    </div>
+                </div>
+                <div class="stat-details">
+                    <p>Crit: <span id="crit-val">0</span>%</p>
+                    <p>Dodge: <span id="preview-dodge">0</span>%</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="screen-battle" class="hidden">
+            <div class="stats">
+                <span class="level"></span>
+                <span class="hp"></span>
+                <span class="attack"></span>
+                <span class="defence"></span>
+                <span class="dodge"></span>
+                <span class="critical"></span>
+            </div>
+            <div class="battle-log">
+                <span class="hp"></span>
+                <span class="attack"></span>
+                <span class="defence"></span>
+                <span class="critical"></span>
+                <span class="dodge"></span>
+                <span class="block"></span>
+                <span class="missed"></span>
+            </div>
+        </section>
+
+        <section id="screen-shop" class="hidden">
+            <h2>Items</h2>
+        </section>
+
+        <div id="death-overlay" class="hidden">
+            <div class="death-text">YOU DIED</div>
+        </div>
+    </div>
+
     <script type="module" src="/src/main.ts"></script>
 </body>
 
