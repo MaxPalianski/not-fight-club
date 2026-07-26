@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>method</key>
+	<string>developer-id</string>
+	<key>teamID</key>
+	<string>P2PHZ9K5JJ</string>
+	<key>uploadBitcode</key>
+	<false/>
+	<key>uploadSymbols</key>
+	<true/>
+	<key>compileBitcode</key>
+	<false/>
+	<key>provisioningProfiles</key>
+	<dict>
+		<key>com.tunnelbear.mac.TunnelBear</key>
+		<string>a83cea96-15f4-477f-b5ba-a758fe5392ea</string>
+		<key>com.tunnelbear.mac.TunnelBear.vpn-extension</key>
+		<string>69737182-29ad-4a0a-b3dc-6d4e5e7521bd</string>
+		<key>com.tunnelbear.mac.TunnelBear.Launcher</key>
+		<string>ce05bbda-0e28-42c9-b671-e8715717d60f</string>
+	</dict>
+</dict>
+</plist>
